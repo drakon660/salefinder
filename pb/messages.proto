@@ -1,0 +1,66 @@
+syntax="proto3";
+
+option csharp_namespace="Messages";
+option java_package="com.salefinder";
+
+message PDFInputMessage
+{
+    string fileName = 1;
+    int32 pagenr=2;
+}
+message PDFOutputMessage
+{
+    string fileName = 1;
+    string text = 2;
+    int32 pagenr=3;
+}
+
+message PDFExportRequest
+{
+    PDFInputMessage PDFInputMessage = 1;
+}
+
+message PDFExportResponse
+{
+    PDFOutputMessage PDFOutputMessage = 1;
+}
+
+message PongResponse
+{
+    string message=1;
+}
+
+message PongRequest
+{
+    string message = 1;
+}
+
+message PingRequest
+{
+    string message =1;
+}
+
+
+message PDFInfoMessage
+{
+    string fileName = 1;
+    int32 pagesCount = 2;
+    bool error=3;
+}
+
+message PDFError
+{
+    string message=1;
+}
+
+message Words{
+    string message=1;
+}
+
+service PDFBoxService
+{
+    rpc PdfPagesCount(PDFInfoMessage) returns (PDFInfoMessage);
+    rpc ImportExport(PDFExportRequest) returns (PDFExportResponse);
+    rpc Ping(PingRequest) returns (PongResponse);
+    rpc Chat(stream Words) returns (stream Words) {}
+}

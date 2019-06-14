@@ -1,0 +1,1 @@
+protoc -I pb --java_out=SaleFinder.Servj\src\main\java pb\messages.proto --grpc_out SaleFinder.Servj\src\main\java  --plugin=protoc-gen-grpc=c:\protoc\gen\protoc-gen-grpc-java-1.18.0-windows-x86_32.exe

@@ -1,0 +1,1 @@
+protoc -I pb --csharp_out=SaleFinder.Messages pb\messages.proto --grpc_out SaleFinder.Messages  --plugin=protoc-gen-grpc=packages\Grpc.Tools.1.18.0\tools\windows_x86\grpc_csharp_plugin.exe

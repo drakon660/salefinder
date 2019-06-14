@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FileDownloaderManager" Version="1.3.0" />
+    <PackageReference Include="Grpc" Version="1.18.0" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.9.0" />
+    <PackageReference Include="Mapster" Version="3.3.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="2.2.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.2.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SaleFinder.Messages\SaleFinder.Messages.csproj" />
+  </ItemGroup>
+
+</Project>
